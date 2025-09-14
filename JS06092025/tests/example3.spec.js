@@ -17,5 +17,10 @@ test('test', async ({ page }) => {
   page.waitForTimeout(2000);
   page.waitForTimeout(2000);
   page.waitForTimeout(2000);
+  await homePage.navigateToLoginPage();
+  await new Common(page).performlogin();
+  page.waitForTimeout(2000);
+  await homePage.navigateToLoginPage();
+  await new Common(page).performlogin();
 
 });
