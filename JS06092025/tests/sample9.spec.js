@@ -13,7 +13,9 @@ test('test', async ({ page }) => {
   await homePage.navigateToLoginPage();
   await new Common(page).performlogin();
   page.waitForTimeout(2000);
-  await welcomePage.verifyWelComePage();
+  await welcomePage.logout();
+  await welcomePage.logout();
+  await welcomePage.logout();
   await welcomePage.logout();
   await homePage.verifyHomepage();
 
